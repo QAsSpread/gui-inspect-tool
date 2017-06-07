@@ -1,0 +1,24 @@
+<Bugs>
+  <!--________________________________________________________________________________________________________________________-->
+  <Test Method="Microsoft.Test.UIAutomation.Tests.Patterns.AutomationElementTests.AutomationIdProperty178" TestName="AutomationIdProperty.1.7.8" Pri="Pri1">
+    <Steps>
+      <Step Step="0">PreCondition: Element must support ControlType property to determine if supporting ControlType is required</Step>
+      <Step Step="1">Precondition: Element does not support the WindowPattern, thus is not a window</Step>
+      <Step Step="2">Precondition: IsControlElementProperty == true</Step>
+      <Step Step="3">Precondition: ControlType != ListItem (known item that does not support AutomationIdProperty)</Step>
+      <Step Step="4">Precondition: ControlType != DataItem (known item that does not support AutomationIdProperty)</Step>
+      <Step Step="5">Precondition: ControlType != TreeItem (known item that does not support AutomationIdProperty)</Step>
+      <Step Step="6">Precondition: ControlType != TabViewItem (known item that does not support AutomationIdProperty)</Step>
+      <Step Step="7">Precondition: ControlType != TitleBar (known item that does not support AutomationIdProperty)</Step>
+      <Step Step="8">Precondition: Parent's ControlType != ListItem(known item that does not support AutomationIdProperty)</Step>
+      <Step Step="9">Precondition: Parent's ControlType != DataItem(known item that does not support AutomationIdProperty)</Step>
+      <Step Step="10">Verify: AutomationIdProperty != string.Empty</Step>
+      <Step Step="11">Verify: AutomationIdProperty != 0</Step>
+    </Steps>
+    <FailedStep Step="10">
+      <Issue Verification="Check_IsPane">
+        <Repro OS="6.1" ClientSideProvider="T" PS="TBD" ControlPath="" Error="10). Verify: AutomationIdProperty != string.Empty" CommandLine="" OSVersion="Microsoft Windows NT 6.1.7601 Service Pack 1" Date="19/05/2017 14:07:02" />
+      </Issue>
+    </FailedStep>
+  </Test>
+</Bugs>
